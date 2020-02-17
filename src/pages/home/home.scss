@@ -1,0 +1,38 @@
+.home {
+  display: flex;
+  #side-nav {
+    height: 100vh;
+    width: 20%;
+    background: #1A88FE;
+  }
+
+  .side-nav_title {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: 700;
+    span {
+      font-weight: 400;
+    }
+  }
+
+  #menu {
+    color: #FFFFFF;
+    list-style: none;
+    width: 100%;
+    padding: 0 50px;
+    font-size: 15px;
+    li {
+      margin-bottom: 30px;
+    }
+  }
+
+  #container {
+    width: 100%;
+  }
+
+
+}
