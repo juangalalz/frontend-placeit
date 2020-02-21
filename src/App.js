@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom'
 
 import './App.scss';
+import { Grid } from 'react-flexbox-grid';
 
 class App extends Component {
   static propTypes={
@@ -9,11 +11,30 @@ class App extends Component {
   };
 
   render() {
-    const { children }= this.props;
+    const { children } = this.props;
 
     return (
       <div className="App">
-        { children }
+        <aside id="side-nav">
+          <h1 className="side-nav_title">Place<span>it</span></h1>
+          <ul id="menu">
+            <li>
+              <Link to="/reservas" >
+                <i className="far fa-calendar"></i>
+                Reservas
+              </Link>
+            </li>
+            <li>
+              <Link to="/" >
+                <i className="fas fa-film"></i>
+                Películas
+              </Link>
+            </li>
+          </ul>
+        </aside>
+        <Grid id="container">
+          { children }
+        </Grid>
       </div>
     );
   }

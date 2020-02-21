@@ -1,0 +1,67 @@
+.reservation-movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .reservation-movie_modal {
+    background: #FFFFFF;
+    border-radius: 15px;
+    max-width: 50%;
+    padding: 25px;
+  }
+
+  .reservation-movie_title {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .reservation-movie_body-form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+
+  .reservation-movie_input {
+    border: solid 1px #b3b3b3;
+    min-height: 25px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 15px;
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .reservation-movie_input-label {
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .input_container {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 64em) {
+  .reservation-movie {
+    .reservation-movie_modal {
+      max-width: 90%;
+    }
+  }
+}

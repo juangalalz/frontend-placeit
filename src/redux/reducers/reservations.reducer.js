@@ -1,41 +1,41 @@
 import {
-  GET_MOVIES_REQUEST,
-  GET_MOVIES_SUCCESS,
-  GET_MOVIES_FAILURE,
-  CREATE_MOVIES_REQUEST,
-  CREATE_MOVIES_SUCCESS,
-  CREATE_MOVIES_FAILURE,
+  GET_RESERVATIONS_REQUEST,
+  GET_RESERVATIONS_SUCCESS,
+  GET_RESERVATIONS_FAILURE,
+  CREATE_RESERVATION_REQUEST,
+  CREATE_RESERVATION_SUCCESS,
+  CREATE_RESERVATION_FAILURE,
 } from '../action-types'
 
 const initialState = {
-  movies: [],
+  reservations: [],
   error: false,
   loading: false,
   loadingCreate: false,
-  movie: {}
+  reservation: {}
 }
 
-const movies = (state = initialState, action) => {
+const reservations = (state = initialState, action) => {
   switch (action.type) {
 
-    case GET_MOVIES_REQUEST: {
+    case GET_RESERVATIONS_REQUEST: {
       return {
         ...state,
         loading: true
       }
     }
 
-    case GET_MOVIES_SUCCESS: {
-      let movies = action.data.data
+    case GET_RESERVATIONS_SUCCESS: {
+      let reservations = action.data.data
       return {
         ...state,
-        movies,
+        reservations,
         error: false,
         loading: false
       }
     }
 
-    case GET_MOVIES_FAILURE: {
+    case GET_RESERVATIONS_FAILURE: {
       return {
         ...state,
         error: action.error,
@@ -43,24 +43,24 @@ const movies = (state = initialState, action) => {
       }
     }
 
-    case CREATE_MOVIES_REQUEST: {
+    case CREATE_RESERVATION_REQUEST: {
       return {
         ...state,
         loadingCreate: true
       }
     }
 
-    case CREATE_MOVIES_SUCCESS: {
-      let movie = action.data
+    case CREATE_RESERVATION_SUCCESS: {
+      let reservation = action.data
       return {
         ...state,
-        movie,
+        reservation,
         error: false,
         loadingCreate: false
       }
     }
 
-    case CREATE_MOVIES_FAILURE: {
+    case CREATE_RESERVATION_FAILURE: {
       return {
         ...state,
         error: action.error,
@@ -73,4 +73,4 @@ const movies = (state = initialState, action) => {
   }
 }
 
-export default movies
+export default reservations
