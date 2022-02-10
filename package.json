@@ -6,7 +6,7 @@
   "dependencies": {
     "@wojtekmaj/react-daterange-picker": "^2.5.0",
     "moment": "^2.24.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-flexbox-grid": "^2.1.2",
